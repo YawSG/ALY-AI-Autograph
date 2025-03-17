@@ -61,6 +61,11 @@
     text-decoration: none;
     color: #333;
   }
+     
+  .nav-links a.active {
+    color: #0073E6;
+    font-weight: 500;
+  }
   
   /* Buttons */
   .button {

@@ -144,25 +144,56 @@ nav {
   margin-bottom: 60px;
 }
 
-.features-grid {
+/* Homepage Features */
+.home .features-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.feature {
+.home .feature {
   width: 100%;
   margin-bottom: 60px;
   padding: 0 20px;
 }
 
-.feature h3 {
+.home .feature h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
 }
 
-.feature p {
+.home .feature p {
   color: #555;
+}
+
+/* About Page Features */
+.about .features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.about .feature {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.about .feature:hover {
+  transform: translateY(-5px);
+}
+
+.about .feature h3 {
+  font-size: 1.3rem;
+  margin: 15px 0;
+}
+
+.about .feature p {
+  color: #555;
+  line-height: 1.5;
 }
 
 .feature-icon {
@@ -580,7 +611,7 @@ footer {
 ----------------------------------------- */
 @media (min-width: 768px) {
   /* General Responsive */
-  .feature {
+  .home .feature {
     width: 30%;
   }
   
@@ -603,11 +634,7 @@ footer {
     padding-left: 40px;
   }
   
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-  }
+  /* Removed redundant grid definition since it's now defined above */
   
   .newsletter-form {
     flex-direction: row;

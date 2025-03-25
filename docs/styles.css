@@ -1,269 +1,627 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap');
 
+/* -----------------------------------------
+   TABLE OF CONTENTS:
+   1. General Styles
+   2. Layout
+   3. Header and Navigation
+   4. Buttons
+   5. Hero Section
+   6. Features Section
+   7. CTA Section
+   8. Reviews Section
+   9. Footer
+   10. Page Headers (Shared)
+   11. Security Page Specific
+   12. About Page Specific
+   13. Responsive Design
+----------------------------------------- */
+
+/* -----------------------------------------
+   1. General Styles
+----------------------------------------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-  }
-  
-  /* Layout */
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  /* Header and Navigation */
-  header {
-    background-color: #fff;
-    padding: 20px 0;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    font-weight: bold;
-    font-size: 1.2rem;
-  }
-  
-  .nav-links {
-    display: flex;
-    list-style: none;
-  }
-  
-  .nav-links li {
-    margin-left: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #333;
-  }
-     
-  .nav-links a.active {
-    color: #0073E6;
-    font-weight: 500;
-  }
-  
-  /* Buttons */
-  .button {
-    display: inline-block;
-    background-color: #0073E6;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.3s;
-  }
-  
-  .button:hover {
-    background-color: #005bb5;
-  }
-  
-  /* Hero Section */
-  .hero {
-    background-color: white;
-    text-align: center;
-    padding: 80px 0;
-  }
-  
-  .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  /* Features Section */
-  .features {
-    background-color: #F5F7FA;
-    padding: 80px 0;
-    text-align: center;
-  }
-  
-  .features-heading {
-    margin-bottom: 60px;
-  }
-  
-  .features-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+/* -----------------------------------------
+   2. Layout
+----------------------------------------- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* -----------------------------------------
+   3. Header and Navigation
+----------------------------------------- */
+header {
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+   
+.nav-links a.active {
+  color: #0073E6;
+  font-weight: 500;
+}
+
+/* -----------------------------------------
+   4. Buttons
+----------------------------------------- */
+.button {
+  display: inline-block;
+  background-color: #0073E6;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #005bb5;
+}
+
+/* -----------------------------------------
+   5. Hero Section
+----------------------------------------- */
+.hero {
+  background-color: white;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* -----------------------------------------
+   6. Features Section
+----------------------------------------- */
+.features {
+  background-color: #F5F7FA;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.features-heading {
+  margin-bottom: 60px;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.feature {
+  width: 100%;
+  margin-bottom: 60px;
+  padding: 0 20px;
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.feature p {
+  color: #555;
+}
+
+.feature-icon {
+  color: #0073E6;
+  margin-bottom: 20px;
+}
+
+/* -----------------------------------------
+   7. CTA Section
+----------------------------------------- */
+.cta {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* -----------------------------------------
+   8. Reviews Section
+----------------------------------------- */
+.reviews {
+  padding: 80px 0;
+}
+
+.reviews h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.review-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.review {
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.review p {
+  margin-bottom: 20px;
+}
+
+.reviewer {
+  display: flex;
+  align-items: center;
+}
+
+.reviewer img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.reviewer-info h4 {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.reviewer-info p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+
+/* -----------------------------------------
+   9. Footer
+----------------------------------------- */
+footer {
+  background-color: #E3E8EE;
+  padding: 50px 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.footer-logo {
+  margin-bottom: 30px;
+}
+
+.footer-links h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #555;
+}
+
+.social-links {
+  display: flex;
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 10px;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+/* -----------------------------------------
+   10. Page Headers (Shared)
+----------------------------------------- */
+.page-header {
+  margin: 0;
+  padding: 80px 0;
+  text-align: center;
+  background-color: #F5F7FA;
+}
+
+/* -----------------------------------------
+   11. Security Page Specific
+----------------------------------------- */
+.security-intro {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.security-intro p {
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.law-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.law-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.law-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.law-card-image {
+  height: 200px;
+  background-color: #E3E8EE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.law-card-content {
+  padding: 30px;
+}
+
+.law-card-content h3 {
+  margin-bottom: 15px;
+  color: #0073E6;
+}
+
+.law-card-content p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.law-card-button {
+  display: inline-block;
+  background-color: #0073E6;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.law-card-button:hover {
+  background-color: #005bb5;
+}
+
+/* -----------------------------------------
+   12. About Page Specific
+----------------------------------------- */
+/* About Content Section */
+.about-content {
+  padding: 80px 0;
+}
+
+.about-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about-image {
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-text h2 {
+  margin-bottom: 20px;
+  color: #0073E6;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Platform Description */
+.platform-description {
+  background-color: #F5F7FA;
+  padding: 80px 0;
+}
+
+.platform-description h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0073E6;
+}
+
+.platform-description p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Founders Section */
+.founders h3 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.founders-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.founder {
+  text-align: center;
+  max-width: 200px;
+}
+
+.founder img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.founder h4 {
+  margin-bottom: 5px;
+}
+
+.founder p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* About Features Section */
+.about-features {
+  padding: 80px 0;
+}
+
+.about-features h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* Ethics Section */
+.ethics-section {
+  background-color: #F5F7FA;
+  padding: 80px 0;
+}
+
+.ethics-section h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.ethics-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.ethics-item {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ethics-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.ethics-icon {
+  color: #0073E6;
+  margin-bottom: 20px;
+}
+
+.ethics-item h3 {
+  margin-bottom: 15px;
+}
+
+.ethics-item p {
+  color: #555;
+}
+
+/* Newsletter Section */
+.newsletter {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.newsletter h2 {
+  margin-bottom: 20px;
+}
+
+.newsletter p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 15px;
+}
+
+.newsletter-form input {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-message {
+  margin-top: 20px;
+  color: #0073E6;
+  font-weight: 500;
+}
+
+/* -----------------------------------------
+   13. Responsive Design
+----------------------------------------- */
+@media (min-width: 768px) {
+  /* General Responsive */
   .feature {
-    width: 100%;
-    margin-bottom: 60px;
-    padding: 0 20px;
-  }
-  
-  .feature h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-  }
-  
-  .feature p {
-    color: #555;
-  }
-  
-  /* CTA Section */
-  .cta {
-    text-align: center;
-    padding: 80px 0;
-  }
-  
-  .cta h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-  }
-  
-  /* Reviews Section */
-  .reviews {
-    padding: 80px 0;
-  }
-  
-  .reviews h2 {
-    text-align: center;
-    margin-bottom: 60px;
-  }
-  
-  .review-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: 30%;
   }
   
   .review {
-    width: 100%;
-    margin-bottom: 40px;
-    padding: 30px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    width: 30%;
   }
   
-  .review p {
-    margin-bottom: 20px;
-  }
-  
-  .reviewer {
-    display: flex;
+  /* About Page Responsive */
+  .about-grid {
+    flex-direction: row;
     align-items: center;
   }
   
-  .reviewer img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 15px;
+  .about-image {
+    flex: 1;
   }
   
-  .reviewer-info h4 {
-    font-weight: 600;
-    margin-bottom: 5px;
+  .about-text {
+    flex: 1;
+    padding-left: 40px;
   }
   
-  .reviewer-info p {
-    font-size: 0.9rem;
-    color: #555;
-    margin: 0;
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
   }
   
-  /* Footer */
-  footer {
-    background-color: #E3E8EE;
-    padding: 50px 0 20px;
+  .newsletter-form {
+    flex-direction: row;
   }
   
-  .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 40px;
+  .newsletter-form input {
+    flex: 1;
   }
   
-  .footer-logo {
-    margin-bottom: 30px;
+  /* Security Page Responsive */
+  .law-card {
+    max-width: 48%;
   }
-  
-  .footer-links h3 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  
-  .footer-links ul {
-    list-style: none;
-  }
-  
-  .footer-links li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-links a {
-    text-decoration: none;
-    color: #555;
-  }
-  
-  .social-links {
-    display: flex;
-    margin-top: 20px;
-  }
-  
-  .social-links a {
-    display: flex;
+}
+
+@media (max-width: 768px) {
+  .law-cards {
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-color: #fff;
-    margin-right: 10px;
   }
   
-  .copyright {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #555;
-    padding-top: 20px;
-    border-top: 1px solid #ccc;
+  .law-card {
+    max-width: 100%;
   }
-  
-  /* Media Queries for Responsive Design */
-  @media (min-width: 768px) {
-    .feature {
-      width: 30%;
-    }
-    
-    .review {
-      width: 30%;
-    }
-  }
+}
